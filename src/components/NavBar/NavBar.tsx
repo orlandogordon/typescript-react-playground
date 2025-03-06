@@ -10,7 +10,7 @@ import ViteLogo from "../../assets/vite-js-logo.png";
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   return (
-    <div className="fixed top-0 right-0 ">
+    <div className="fixed top-0 right-0 z-10">
       <div className="hidden lg:flex justify-between w-screen p-8 ">
         <Link to={"./"}>
           <img src={ViteLogo} alt="vite logo" className="h-12" />
@@ -49,7 +49,7 @@ const NavBar = () => {
       <div
         className={
           menuOpen
-            ? "w-screen h-screen bg-green-400 flex flex-col lg:hidden"
+            ? "w-screen h-screen bg-zinc-700 flex flex-col relative lg:hidden"
             : "hidden"
         }
       >
